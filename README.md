@@ -7,3 +7,5 @@
 Чтобы исправить эту ошибку следует открыть psql, соединиться с базой данных по данным, представленным в docker-compose.yml, и выполнить следующий запрос:
 
 CREATE TABLE "Users" ("Id" SERIAL PRIMARY KEY, "Name" VARCHAR(20) NOT NULL, "Email" VARCHAR(20) NOT NULL)
+
+Подключение к базе данных из терминала докера: docker exec -it myusers-db-1 psql -p 5433 -U user -d MyUsersDb
